@@ -6,9 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
+title: Revolution Game House
 email: info@revolutiongamehouse.com
-description: > # Games, grub, and grog at the premier board game cafe of St. Louis,
+description: > #
+  Games, grub, and grog at the premier board game cafe of St. Louis,
   soon to open on the Delmar Loop The community we want in the city we love.
   Check out our kickstarter.
 baseurl: "" # the subpath of your site, e.g. /blog

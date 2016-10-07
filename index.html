@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<section class="section home">
+<section class="section" id="home">
+
   <div class="section-text-home">
     <h1>Games, Grub <span class="italic">&</span> Grog at the premier board game cafe of St. Louis</h1>
     <h2>The community we want in the city we love.</h2>
@@ -10,7 +11,7 @@ layout: default
   </div>
 </section>
 
-<section class="section about">
+<section class="section" id="about">
   <div class="section-left">
     <div class="section-left-video">
 
@@ -29,20 +30,18 @@ layout: default
   </div>
 </section>
 
-<section class="section library">
-  <div class="section-right">
-    <div class="section-text">
-      <h1>An extensive library</h1>
-      <p>
-        From classics like Monopoly and Scrabble to intense strategy games like Twilight
-        Imperium and Game of Thrones, our library is full of quirky, fun, and nostalgic
-        titles and is sure to have something for everyone.
-      </p>
-    </div>
+<section class="section" id="library">
+  <div class="section-full">
+    <h1>An extensive library</h1>
+    <p>
+      From classics like Monopoly and Scrabble to intense strategy games like Twilight
+      Imperium and Game of Thrones, our library is full of quirky, fun, and nostalgic
+      titles and is sure to have something for everyone.
+    </p>
   </div>
 </section>
 
-<section class="section menu">
+<section class="section" id="menu">
   <div class="section-left">
     <div class="section-left-image">
 
@@ -60,7 +59,7 @@ layout: default
   </div>
 </section>
 
-<section class="section kickstarter">
+<section class="section" id="kickstarter">
   <div class="section-full-image">
 
   </div>
@@ -71,7 +70,7 @@ layout: default
   </div>
 </section>
 
-<section class="section contact">
+<section class="section" id="contact">
   <div class="section-left">
     <div class="section-left-image">
 
@@ -80,13 +79,13 @@ layout: default
   <div class="section-right">
     <div class="section-text">
       <h1>Contact</h1>
-      <p>info@revolutiongamehouse.com</p>
-      <a href="facebook.com"></a>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a href="facebook.com">Follow us on Facebook</a>
     </div>
   </div>
 </section>
 
-<section class="section faq">
+<section class="section" id="faq">
   <h1>Frequently Asked Questions</h1>
   <div class="faq-card">
     <div class="faq-card-image">
