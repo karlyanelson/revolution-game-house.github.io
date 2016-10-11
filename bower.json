@@ -1,0 +1,28 @@
+{
+  "name": "Revolution Game House",
+  "version": "1.0.0",
+  "homepage": "https://github.com/revolution-game-house/revolution-game-house.github.io",
+  "description": "Games, grub, and grog at the premier board game cafe of St. Louis",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "revolution",
+    "game",
+    "house"
+  ],
+  "authors": [
+    "Karly Nelson"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.7"
+  }
+}
