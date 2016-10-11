@@ -1,7 +1,13 @@
 $light-tan: #FFF8E7;
+$dark-brown: #241300;
+$dark-brown80: rgba(36, 19, 0, .8);
+$dark-brown20: rgba(36, 19, 0, .2);
+$gold: #E8CD8C;
 
 body{
   font-family: "Libre Baserville", Georgia, serif;
+  background-color: $light-tan;
+  color: $dark-brown80;
 }
 
 h1{
@@ -18,7 +24,7 @@ h2{
 .header{
   position: fixed;
   top: 16px;
-  left: 16px;
+  right: 16px;
 
   &-link{
     display: block;
@@ -29,14 +35,17 @@ h2{
   }
 }
 
+//LINKS
+
+
 //NAVIGATION
 .nav{
   position: fixed;
   height: 100vh;
   right: 16px;
-  // top: 50%;
   display: flex;
   align-items: center;
+  z-index: 100;
 
   &-link-list{
     flex: 1 1 auto;
@@ -45,6 +54,22 @@ h2{
     &-item{
       text-align: right;
       margin: 8px 0px;
+      &.active{
+        font-size: 110%;
+        font-weight: bold;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  a {
+    color: $gold;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      font-size: 110%;
+      font-weight: bold;
     }
   }
 }
@@ -75,18 +100,24 @@ h2{
     float: left;
   }
 
+  &-left{
+    background-color: white;
+    background-image:url(/images/paper1440.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    box-shadow: 1px 1px 2px 2px $dark-brown20;
+  }
+
   &-left-image{
     margin: 0 auto;
     width: 80%;
-
+    opacity: .8;
     svg{
       height: 100%;
       width: 100%;
+      max-height: 80vh;
     }
-  }
-
-  &-right{
-    background-color: white;
   }
 
   &-content{
@@ -135,20 +166,22 @@ h2{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: $light-tan;
 }
 
 //HOME
 .section-home{
   background-image: url(/images/home1440.png);
+  color: $light-tan;
 
   &-logo{
     position: relative;
-    top: 4rem;
+    top: 16%;
+
     svg {
       width: 60%;
       display: block;
       margin: 0 auto;
+      max-height: 40vh;
       path{
         fill: $light-tan;
       }
@@ -157,19 +190,22 @@ h2{
 
   &-text{
     position: absolute;
-    bottom: 18%;
+    bottom: 12%;
     left: 6%;
-    max-width: 60%;
+    max-width: 40%;
   }
 }
 
 //ABOUT
-.logo-svg{
-  fill: white;
+.section-contact{
+  .section-left{
+    height: 99%;
+  }
 }
 
 //LIBRARY
 .section-library{
+  background-color: $light-tan;
   background-image: url(/images/library1440.png);
   background-attachment: fixed;
 }
@@ -178,12 +214,13 @@ h2{
 .section-kickstarter{
   background-image: url(/images/kickstarter1440.png);
   background-attachment: fixed;
+  color: $light-tan;
 }
 
 //FAQ
 .section.section-faq{
   height: auto;
-  padding-top: 6%;
+  padding-top: 240px;
   padding-bottom: 48px;
 
   h1{
@@ -193,11 +230,16 @@ h2{
 
 .faq-card{
   background: white;
+  background-image:url(/images/paper-card.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   width: 70%;
   position: relative;
   padding: 24px 16px;
   display: flex;
   margin: 48px auto;
+  box-shadow: 1px 1px 2px 2px $dark-brown20;
 
   &-image{
     flex: 0 0 30%;
@@ -224,6 +266,10 @@ h2{
   .section-kickstarter{
     background-image: url(/images/kickstarter768.png);
   }
+  .section-left{
+    background-image: none;
+  }
+
 }
 
 @media (min-width:769px) {
@@ -235,6 +281,9 @@ h2{
   }
   .section-kickstarter{
     background-image: url(/images/kickstarter1024.png);
+  }
+  .section-left{
+    background-image:url(/images/paper1024.png);
   }
 }
 
@@ -248,6 +297,9 @@ h2{
   .section-kickstarter{
     background-image: url(/images/kickstarter1440.png);
   }
+  .section-left{
+    background-image:url(/images/paper1440.png);
+  }
 }
 
 @media (min-width:1441px) {
@@ -259,5 +311,8 @@ h2{
   }
   .section-kickstarter{
     background-image: url(/images/kickstarter1920.png);
+  }
+  .section-left{
+    background-image:url(/images/paper1920.png);
   }
 }
