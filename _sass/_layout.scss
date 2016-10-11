@@ -1,3 +1,18 @@
+//HEADER
+.header{
+  position: fixed;
+  top: 16px;
+  left: 16px;
+
+  &-link{
+    display: block;
+    text-indent: -9999px;
+    background-color: red;
+    height: 40px;
+    width: 40px;
+  }
+}
+
 //NAVIGATION
 .nav{
   position: fixed;
@@ -24,11 +39,15 @@
   width: 100%;
   min-height: 100%;
   height: 100vh;
-  // display: flex;
-  // align-items: center;
+  background-color: #FFF8E7;
 
-  &:nth-child(odd){
-    background-color: blue;
+  &:after{ //clearfix
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
   }
 
   &-left,
@@ -39,8 +58,24 @@
     float: left;
   }
 
+  &-left-image{
+    margin: 0 auto;
+    width: 50%;
+
+    svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &-right{
-    background-color: wheat;
+    background-color: white;
+  }
+
+  &-content{
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   &-text{
@@ -48,5 +83,149 @@
     position: relative;
     left: 10%;
     width: 60%;
+  }
+
+  &-full{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &-text{
+      flex: 0 1 auto;
+      position: relative;
+      left: 55%;
+      width: 30%;
+    }
+  }
+
+  &-center{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &-text{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+//HOME
+.section-home{
+  background-image: url(/images/home.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &-text{
+    position: absolute;
+    bottom: 18%;
+    left: 6%;
+  }
+}
+
+//LIBRARY
+.section-library{
+  background-image: url(/images/library.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+//KICKSTARTER
+.section-kickstarter{
+  background-image: url(/images/kickstarter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+//FAQ
+.section.section-faq{
+  height: auto;
+  padding-top: 6%;
+  padding-bottom: 48px;
+
+  h1{
+    text-align: center;
+  }
+}
+
+.faq-card{
+  background: white;
+  width: 70%;
+  position: relative;
+  padding: 24px 16px;
+  display: flex;
+  margin: 48px 0px;
+
+  &-image{
+    flex: 0 0 30%;
+  }
+
+  &-text{
+    flex: 1 1 auto;
+  }
+
+  &-list{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 0;
+  }
+
+  &:nth-child(even){
+    left: 30%;
+  }
+}
+
+@media (min-width:0px) and (max-width:768px) {
+  .section-home{
+    background-image: url(/images/home768.png);
+  }
+  .section-library{
+    background-image: url(/images/library768.png);
+  }
+  .section-kickstarter{
+    background-image: url(/images/kickstarter768.png);
+  }
+}
+
+@media (min-width:769px) {
+  .section-home{
+    background-image: url(/images/home1024.png);
+  }
+  .section-library{
+    background-image: url(/images/library1024.png);
+  }
+  .section-kickstarter{
+    background-image: url(/images/kickstarter1024.png);
+  }
+}
+
+@media (min-width:1025px) {
+  .section-home{
+    background-image: url(/images/home1440.png);
+  }
+  .section-library{
+    background-image: url(/images/library1440.png);
+  }
+  .section-kickstarter{
+    background-image: url(/images/kickstarter1440.png);
+  }
+}
+
+@media (min-width:1441px) {
+  .section-home{
+    background-image: url(/images/home1920.png);
+  }
+  .section-library{
+    background-image: url(/images/library1920.png);
+  }
+  .section-kickstarter{
+    background-image: url(/images/kickstarter1920.png);
   }
 }
