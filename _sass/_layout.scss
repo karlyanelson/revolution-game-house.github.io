@@ -45,15 +45,15 @@ button{
 
 //NAVIGATION
 .nav{
+  @include display(flex);
+  @include align-items(center);
   position: fixed;
   height: 100vh;
   right: 16px;
-  display: flex;
-  align-items: center;
   z-index: 100;
 
   &-link-list{
-    flex: 1 1 auto;
+    @include flex(1 1 auto);
     list-style: none;
 
     &-item{
@@ -75,6 +75,8 @@ button{
     &:focus {
       font-size: 110%;
       font-weight: bold;
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
   }
 }
@@ -127,22 +129,22 @@ button{
   }
 
   &-content{
-    display: flex;
-    align-items: center;
+    @include display(flex);
+    @include align-items(center);
     height: 100%;
   }
 
   &-text{
-    flex: 0 1 auto;
+    @include flex(0 1 auto);
     position: relative;
     left: 10%;
     width: 60%;
   }
 
   &-full{
+    @include display(flex);
+    @include align-items(center);
     height: 100%;
-    display: flex;
-    align-items: center;
 
     &-text{
       flex: 0 1 auto;
@@ -153,10 +155,10 @@ button{
   }
 
   &-center{
+    @include display(flex);
+    @include align-items(center);
     margin: 0 auto;
     text-align: center;
-    display: flex;
-    align-items: center;
     height: 100%;
 
     &-text{
@@ -320,7 +322,7 @@ button{
   }
 
   &-text{
-    flex: 1 1 auto;
+    @include flex(1 1 auto);
     h2{
       margin-bottom: 1rem;
     }
@@ -342,7 +344,7 @@ button{
     }
 
     &-image{
-      flex: 0 0 100%;
+      @include flex(0 0 100%);
       margin-bottom: 3rem;
       max-height: 30vh;
       svg{
@@ -350,7 +352,7 @@ button{
       }
     }
     &-text{
-      flex: 0 0 100%;
+      @include flex(0 0 100%);
     }
   }
 
