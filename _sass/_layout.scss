@@ -23,8 +23,6 @@ button{
   border-bottom: 6px double $gold;
   font-size: 1.25em;
   padding: 8px 16px;
-  font-weight: normal;
-  font-family: "Libre Baserville", Georgia, serif;
   color: $gold;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -59,15 +57,46 @@ button{
     &-item{
       text-align: right;
       margin: 8px 0px;
-      // &.active{
-      //   font-size: 110%;
-      //   font-weight: bold;
-      //   padding-right: 20px;
-      // }
+      position: relative;
+      height: 24px;
+
+      a{
+        vertical-align: middle;
+      }
+
+      &.active{
+        font-size: 120%;
+        font-weight: bold;
+        padding-right: 4px;
+
+        .nav-link-list-item-indicator{
+          top: 8px;
+          background-color: transparent;
+          opacity: 1;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 8px 16px 8px 0;
+          border-color: transparent $gold transparent transparent;
+        }
+      }
+
+      &-indicator{
+        @include transition(all ease 300ms);
+        position: absolute;
+        right: -16px;
+        top: 14px;
+        display: inline-block;
+        width: 12px;
+        height: 2px;
+        background-color: $gold;
+        opacity: .5;
+      }
     }
   }
 
   a {
+    @include transition(all ease 300ms);
     color: $gold;
     text-decoration: none;
 
@@ -300,7 +329,7 @@ button{
 //FAQ
 .section-faq{
   height: auto;
-  padding-top: 240px;
+  padding-top: 96px;
   padding-bottom: 48px;
 
   h1{
@@ -377,11 +406,11 @@ button{
 
 @media (max-width:768px) {
   h1{
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   h2{
-    font-size: 1.25em
+    font-size: 1.5em
   }
 
   .section-left{
