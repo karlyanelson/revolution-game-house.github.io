@@ -430,6 +430,15 @@ button{
   }
 }
 
+@media (max-width:1024px){
+  .section-library{
+    background-attachment: inherit;
+  }
+  .section-kickstarter{
+    background-attachment: inherit;
+  }
+}
+
 @media (min-width:769px) and (max-width:1024px) {
   .section-home{
     background-image: url(/images/home1024.png);
