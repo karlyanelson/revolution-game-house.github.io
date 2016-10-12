@@ -6,17 +6,25 @@ layout: default
   <div class="section-home-logo">
     {% include logo-lettering.svg %}
   </div>
-  <div class="section-home-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="500">
-    <h1>Games, Grub <span class="italic">&</span> Grog at the premier board game cafe of St. Louis</h1>
+  <div class="section-home-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="200">
+    <h1>Games, Grub <span class="italic">&</span> Grog at the premier board game café of St. Louis</h1>
     <h2>The community we want in the city we love.</h2>
-    <button>Support our kickstarter</button>
+    <form action="http://www.kickstarter.com/projects/450982150/1755212581/share" target="_blank">
+      <button type="submit">Support our kickstarter</button>
+    </form>
   </div>
+  <a class="scroll-pointer" href="#about">
+    <div class="scroll-pointer-wrapper">
+      <p class="scroll-pointer-text">Learn More</p>
+      {% include finger.svg %}
+    </div>
+  </a>
 </section>
 
 <section class="section section-about" id="about">
   <div class="section-left">
     <div class="section-content">
-      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="800">
+      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="300" data-aos-delay="300">
         {% include logo-full.svg %}
       </div>
     </div>
@@ -38,7 +46,7 @@ layout: default
 
 <section class="section section-library" id="library">
   <div class="section-full">
-    <div class="section-full-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="500">
+    <div class="section-full-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="400">
       <h1>An extensive library</h1>
       <p>
         From classics like Monopoly and Scrabble to intense strategy games like Twilight
@@ -52,7 +60,7 @@ layout: default
 <section class="section section-menu" id="menu">
   <div class="section-left">
     <div class="section-content">
-      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="800">
+      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="300">
         {% include menu-image.svg %}
       </div>
     </div>
@@ -73,10 +81,12 @@ layout: default
 
 <section class="section section-kickstarter" id="kickstarter">
   <div class="section-center">
-    <div class="section-center-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="500">
+    <div class="section-center-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="400">
       <h1>Join the Revolution</h1>
       <h2>We are seeking to raise $40,000 to kickstart our project</h2>
-      <button>Support our kickstarter</button>
+      <form action="http://www.kickstarter.com/projects/450982150/1755212581/share" target="_blank">
+        <button type="submit">Support our kickstarter</button>
+      </form>
     </div>
   </div>
 </section>
@@ -84,7 +94,7 @@ layout: default
 <section class="section section-contact" id="contact">
   <div class="section-left">
     <div class="section-content">
-      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="800">
+      <div class="section-left-image" data-aos="fade-in" data-aos-easing="linear" data-aos-duration="600" data-aos-delay="300">
         {% include contact-image.svg %}
       </div>
     </div>
@@ -93,8 +103,10 @@ layout: default
     <div class="section-content">
       <div class="section-text">
         <h1>Contact</h1>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        <a href="facebook.com">Follow us on Facebook</a>
+        <ul class="section-contact-links">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="facebook.com">Follow us on Facebook</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -104,9 +116,9 @@ layout: default
   <h1>Frequently Asked Questions</h1>
 
   <div class="faq-card-list">
-    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="200">
+    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="100">
       <div class="faq-card-image">
-
+        {% include game-counter.svg %}
       </div>
       <div class="faq-card-text">
         <h2>How much does it cost?</h2>
@@ -119,9 +131,9 @@ layout: default
       </div>
     </div>
 
-    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="300">
+    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="100">
       <div class="faq-card-image">
-
+        {% include drummer.svg %}
       </div>
       <div class="faq-card-text">
         <h2>Why Revolution?</h2>
@@ -139,9 +151,9 @@ layout: default
       </div>
     </div>
 
-    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="200">
+    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in">
       <div class="faq-card-image">
-
+        {% include cards.svg %}
       </div>
       <div class="faq-card-text">
         <h2>Why the Delmar Loop?</h2>
@@ -159,9 +171,9 @@ layout: default
       </div>
     </div>
 
-    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="100">
+    <div class="faq-card" data-aos="fade-right" data-aos-easing="ease-in">
       <div class="faq-card-image">
-
+        {% include chess-piece.svg %}
       </div>
       <div class="faq-card-text">
         <h2>Why board games?</h2>

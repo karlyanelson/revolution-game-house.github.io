@@ -1,26 +1,3 @@
-$light-tan: #FFF8E7;
-$dark-tan: #ebd9bc;
-$dark-brown: #241300;
-$dark-brown80: rgba(36, 19, 0, .8);
-$dark-brown20: rgba(36, 19, 0, .2);
-$gold: #E8CD8C;
-
-body{
-  font-family: "Libre Baserville", Georgia, serif;
-  background-color: $light-tan;
-  color: $dark-brown80;
-}
-
-h1{
-  font-size: 30px;
-}
-
-h2{
-  font-style: italic;
-  font-size: 24px;
-}
-
-
 //HEADER
 .header{
   position: fixed;
@@ -44,7 +21,7 @@ button{
   border-right: none;
   border-top: 6px double $gold;
   border-bottom: 6px double $gold;
-  font-size: 20px;
+  font-size: 1.25em;
   padding: 8px 16px;
   font-weight: normal;
   font-family: "Libre Baserville", Georgia, serif;
@@ -56,13 +33,12 @@ button{
 
   &:hover,
   &:focus{
-    border-color: $dark-brown;
-    color: $dark-brown;
-    font-style: italic;
+    opacity: .5;
   }
 
   &:active{
-    opacity: .5;
+    border-color: $dark-brown;
+    color: $dark-brown;
   }
 }
 
@@ -140,7 +116,7 @@ button{
 
   &-left-image{
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     opacity: .8;
     svg{
       height: 100%;
@@ -185,6 +161,10 @@ button{
 
     &-text{
       margin: 0 auto;
+
+      button{
+        margin-top: 1.5rem;
+      }
     }
   }
 }
@@ -192,7 +172,7 @@ button{
 .section-home,
 .section-library,
 .section-kickstarter{
-  background-color: #372f36;
+  background-color: $dark-brown;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -202,6 +182,7 @@ button{
 .section-home{
   background-image: url(/images/home1440.png);
   color: $light-tan;
+  position: relative;
 
   &-logo{
     position: relative;
@@ -220,16 +201,70 @@ button{
 
   &-text{
     position: absolute;
-    bottom: 12%;
+    bottom: 16%;
     left: 6%;
-    max-width: 40%;
+    max-width: 50%;
+
+    button{
+      margin-top: 1.5rem;
+    }
   }
+}
+
+.scroll-pointer{
+  @include transform(translateX(-50%));
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 16px;
+  opacity: .5;
+  text-decoration: none;
+  color: $light-tan;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  svg{
+    display: block;
+    width: 24px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &-text{
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+.finger-svg{
+  fill: $light-tan;
 }
 
 //ABOUT
 .section-contact{
   .section-left{
     height: 99%;
+  }
+
+  &-links{
+    list-style: none;
+    li{
+      margin: 1rem 0;
+    }
+    a{
+      text-decoration: none;
+      color: $dark-brown80;
+      font-style: italic;
+      font-weight: bold;
+
+      &:hover,
+      &:focus{
+        text-decoration: underline;
+        color: $gold;
+      }
+    }
   }
 }
 
@@ -248,7 +283,7 @@ button{
 }
 
 //FAQ
-.section.section-faq{
+.section-faq{
   height: auto;
   padding-top: 240px;
   padding-bottom: 48px;
@@ -259,34 +294,80 @@ button{
 }
 
 .faq-card{
+  @include display(flex);
+  @include align-items(center);
   background: white;
   background-image:url(/images/paper-card.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  width: 70%;
   position: relative;
-  padding: 24px 16px;
-  display: flex;
-  margin: 48px auto;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+  margin: 4rem auto;
   box-shadow: 1px 1px 2px 2px $dark-brown20;
 
   &-image{
-    flex: 0 0 30%;
+    @include flex(0 0 30%);
+    height: 100%;
+
+    svg{
+      display: block;
+      max-height: 100%;
+      width: 90%;
+      margin: 0 auto;
+      opacity: .75;
+    }
   }
 
   &-text{
     flex: 1 1 auto;
+    h2{
+      margin-bottom: 1rem;
+    }
   }
 
   &-list{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 48px 0;
+    padding: 48px 120px;
+  }
+}
+@media (max-width:670px){
+  .faq-card{
+    @include flex-wrap(wrap);
+    padding: 1rem;
+
+    &-list{
+      padding-top: 0px;
+    }
+
+    &-image{
+      flex: 0 0 100%;
+      margin-bottom: 3rem;
+      max-height: 30vh;
+      svg{
+        max-height: 30vh;
+      }
+    }
+    &-text{
+      flex: 0 0 100%;
+    }
+  }
+
+  .section-left .section-left-image{
+    width: 90%;
+    margin-bottom: 2rem;
   }
 }
 
-@media (min-width:0px) and (max-width:768px) {
+@media (max-width:768px) {
+  h1{
+    font-size: 1.5em;
+  }
+
+  h2{
+    font-size: 1.25em
+  }
   .section-home{
     background-image: url(/images/home768.png);
   }
@@ -296,13 +377,60 @@ button{
   .section-kickstarter{
     background-image: url(/images/kickstarter768.png);
   }
+
   .section-left{
+    background-color: $light-tan;
     background-image: none;
+    box-shadow: none;
+    &-image{
+      width: 60%;
+      margin-bottom: 4rem;
+    }
   }
 
+  .section-left,
+  .section-right{
+    width: 100%;
+    float: none;
+    height: auto !important;
+  }
+
+  .section{
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-flow(column);
+
+    &-home{
+      display: block;
+    }
+
+    &-text{
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+    }
+    &-full-text{
+      left: 0;
+      width: 80%;
+      margin: 0 auto;
+    }
+    &-faq{
+      padding-top: 4rem;
+    }
+  }
+
+  .faq-card{
+    background-image: none;
+    background-color: $light-tan;
+    box-shadow: none;
+    &-list{
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
 
-@media (min-width:769px) {
+@media (min-width:769px) and (max-width:1024px) {
   .section-home{
     background-image: url(/images/home1024.png);
   }
@@ -317,7 +445,7 @@ button{
   }
 }
 
-@media (min-width:1025px) {
+@media (min-width:1025px) and (max-width:1440px) {
   .section-home{
     background-image: url(/images/home1440.png);
   }
