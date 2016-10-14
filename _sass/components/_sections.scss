@@ -8,7 +8,7 @@
 .section-home{
   color: $light-tan;
   position: relative;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 
   &-logo{
     position: relative;
@@ -29,6 +29,7 @@
     margin-top: 16vh;
     max-width: 50%;
     padding-left: 5%;
+    margin-bottom: 6rem;
 
     button{
       margin-top: 1.5rem;
@@ -109,6 +110,10 @@
 //LIBRARY
 .section-library{
   background-color: $light-tan;
+
+  .section-bg-img{
+    opacity: .7;
+  }
 }
 
 //KICKSTARTER
@@ -124,6 +129,7 @@
 
   h1{
     text-align: center;
+    padding: .5rem;
   }
 }
 
@@ -139,6 +145,10 @@
   padding: 1.5rem 2rem 1.5rem 1rem;
   margin: 4rem auto;
   box-shadow: 1px 1px 2px 2px $dark-brown20;
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
 
   &-image{
     @include flex(0 0 30%);

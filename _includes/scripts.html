@@ -1,32 +1,16 @@
-<!-- <script>
-//scrolling animation to divs
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
+<script>
+  //mobile navigation
+  $('.header').click(function(){
+    $('.nav').toggleClass('is-open');
+    $('.nav-menu-icon').toggleClass('is-clicked');
   });
-});
-</script> -->
 
-<!-- <script>
-//don't have hash in url
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    }
+  $('.nav-link-list-item a').click(function(){
+    $('.nav').removeClass('is-open');
+    $('.nav-menu-icon').removeClass('is-clicked');
   });
-});
-</script> -->
+
+</script>
 
 <script>
 //illustration animations on scroll

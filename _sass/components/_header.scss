@@ -1,15 +1,21 @@
 .header{
   position: fixed;
   top: 16px;
-  left: 16px;
-  z-index: 20;
+  right: 16px;
+  z-index: 120;
   display: none;
+  height: 20px;
+  width: 20px;
 
-  &-link{
+  &:hover{
+    cursor: pointer;
+  }
+
+  &-logo{
     display: block;
-    text-indent: -9999px;
     height: 40px;
     width: 40px;
+    margin-right: 24px;
 
     svg{
       display: block;
