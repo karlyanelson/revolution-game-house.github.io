@@ -89,6 +89,7 @@
   }
 }
 
+//MOBILE NAV
 @media (max-width: 1023px){
   .nav{
     @include transform(translateY(-100%));
