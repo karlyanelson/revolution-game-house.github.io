@@ -1,0 +1,32 @@
+.header{
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 20;
+  display: none;
+
+  &-link{
+    display: block;
+    text-indent: -9999px;
+    height: 40px;
+    width: 40px;
+
+    svg{
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+    }
+
+    svg path{
+      fill: $gold;
+    }
+  }
+}
+
+@media (max-width: 1023px){
+  .header{
+    display: block;
+  }
+}

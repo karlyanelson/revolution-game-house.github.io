@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 //scrolling animation to divs
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -14,10 +14,19 @@ $(function() {
     }
   });
 });
+</script> -->
 
-//navigation link selection
-
-</script>
+<!-- <script>
+//don't have hash in url
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    }
+  });
+});
+</script> -->
 
 <script>
 //illustration animations on scroll

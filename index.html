@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="section section-home" id="home">
+<section class="section section-home cd-section" id="section1">
   <div class="section-bg-img">
     <img srcset="
       images/home1024.png 1024w,
@@ -21,7 +21,7 @@ layout: default
       <button type="submit">Support our kickstarter</button>
     </form>
   </div>
-  <a class="scroll-pointer" href="#about">
+  <a class="scroll-pointer cd-scroll-down" href="#section2">
     <div class="scroll-pointer-wrapper">
       <p class="scroll-pointer-text">Learn More</p>
       {% include finger.svg %}
@@ -29,7 +29,7 @@ layout: default
   </a>
 </section>
 
-<section class="section section-about" id="about">
+<section class="section section-about cd-section" id="section2">
   <div class="section-left">
     <div class="section-content">
       <div class="section-left-image" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="400">
@@ -52,7 +52,7 @@ layout: default
   </div>
 </section>
 
-<section class="section section-library" id="library">
+<section class="section section-library cd-section" id="section3">
   <div class="section-bg-img">
     <img srcset="
       images/library1024.png 1024w,
@@ -73,7 +73,7 @@ layout: default
   </div>
 </section>
 
-<section class="section section-menu" id="menu">
+<section class="section section-menu cd-section" id="section4">
   <div class="section-left">
     <div class="section-content">
       <div class="section-left-image" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="600" data-aos-delay="400">
@@ -95,7 +95,7 @@ layout: default
   </div>
 </section>
 
-<section class="section section-kickstarter" id="kickstarter">
+<section class="section section-kickstarter cd-section" id="section5">
   <div class="section-bg-img">
     <img srcset="
       images/kickstarter1024.png 1024w,
@@ -115,7 +115,7 @@ layout: default
   </div>
 </section>
 
-<section class="section section-contact" id="contact">
+<section class="section section-contact cd-section" id="section6">
   <div class="section-left">
     <div class="section-content">
       <div class="section-left-image" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="600" data-aos-delay="400">
@@ -128,15 +128,15 @@ layout: default
       <div class="section-text">
         <h1>Contact</h1>
         <ul class="section-contact-links">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li><a href="facebook.com">Follow us on Facebook</a></li>
+          <li><span class="section-contact-links-icon">{% include mail-icon.svg %}</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><span class="section-contact-links-icon">{% include facebook-icon.svg %}</span><a href="facebook.com">Follow us on Facebook</a></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-faq" id="faq">
+<section class="section section-faq cd-section" id="section7">
   <h1>Frequently Asked Questions</h1>
 
   <div class="faq-card-list">
@@ -225,5 +225,4 @@ layout: default
       </div>
     </div>
   </div>
-
 </section>

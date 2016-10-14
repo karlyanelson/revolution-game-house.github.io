@@ -1,0 +1,25 @@
+button{
+  display: inline-block;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: 6px double $gold;
+  border-bottom: 6px double $gold;
+  font-size: 1.25em;
+  padding: 8px 16px;
+  color: $gold;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus{
+    opacity: .5;
+  }
+
+  &:active{
+    border-color: $dark-brown;
+    color: $dark-brown;
+  }
+}

@@ -1,0 +1,127 @@
+@media (max-width:670px){
+  .faq-card{
+    @include flex-wrap(wrap);
+    padding: 1rem;
+
+    &-list{
+      padding-top: 0px;
+    }
+
+    &-image{
+      @include flex(0 0 100%);
+      margin-bottom: 3rem;
+      max-height: 30vh;
+      svg{
+        max-height: 30vh;
+      }
+    }
+    &-text{
+      @include flex(0 0 100%);
+    }
+  }
+
+  .section-left .section-left-image{
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width:1023px) {
+  h1{
+    font-size: 2em;
+  }
+
+  h2{
+    font-size: 1.5em
+  }
+
+  button{
+    font-size: 1em;
+  }
+
+  .section-left{
+    background-color: $light-tan;
+    background-image: none;
+    box-shadow: none;
+    &-image{
+      width: 60%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .section-left,
+  .section-right{
+    width: 100%;
+    float: none;
+    height: auto !important;
+  }
+
+  .section{
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-flow(column);
+
+    &-home{
+      display: block;
+      text-align: center;
+
+      &-text{
+        max-width: 100%;
+        padding: 0 1rem;
+        left: 0;
+      }
+    }
+
+    &-text{
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+    }
+    &-full-text{
+      left: 0;
+      width: 80%;
+      margin: 0 auto;
+    }
+    &-contact{
+      text-align: center;
+      &-links li{
+        margin-bottom: 1.5rem;
+      }
+      &-links-icon{
+        display: block;
+        margin: 0 auto;
+        // margin-bottom: 8px;
+      }
+    }
+    &-faq{
+      padding-top: 4rem;
+    }
+  }
+
+  .faq-card{
+    background-image: none;
+    background-color: $light-tan;
+    box-shadow: none;
+    &-list{
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .nav{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+  .section-left{
+    background-image:url(/images/paper1440.png);
+  }
+}
+
+@media (min-width:1441px) {
+  .section-left{
+    background-image:url(/images/paper1920.png);
+  }
+}
