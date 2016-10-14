@@ -12,7 +12,7 @@
 
   &-logo{
     position: relative;
-    margin-top: 8vh;
+    padding-top: 8vh;
 
     svg {
       width: 60%;
@@ -26,10 +26,11 @@
   }
 
   &-text{
-    margin-top: 16vh;
+    margin-top: 12vh;
     max-width: 50%;
     padding-left: 5%;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
 
     button{
       margin-top: 1.5rem;
@@ -46,6 +47,7 @@
   opacity: .5;
   text-decoration: none;
   color: $light-tan;
+  // margin-top: 1.5rem;
 
   &:hover{
     opacity: 1;

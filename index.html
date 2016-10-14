@@ -11,22 +11,24 @@ layout: default
       sizes="100vw"
       src="images/home1440.png" alt="Revolution Game House"/>
   </div>
-  <div class="section-home-logo">
-    {% include logo-lettering.svg %}
-  </div>
-  <div class="section-home-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="200">
-    <h1>Games, Grub <span class="italic">&</span> Grog at the premier board game café of St. Louis</h1>
-    <h2>The community we want in the city we love.</h2>
-    <form action="http://www.kickstarter.com/projects/450982150/1755212581/share" target="_blank">
-      <button type="submit">Support our kickstarter</button>
-    </form>
-  </div>
-  <a class="scroll-pointer cd-scroll-down" href="#section2">
-    <div class="scroll-pointer-wrapper">
-      <p class="scroll-pointer-text">Learn More</p>
-      {% include finger.svg %}
+  <div class="section-home-wrapper">
+    <div class="section-home-logo">
+      {% include logo-lettering.svg %}
     </div>
-  </a>
+    <div class="section-home-text" data-aos="fade-in" data-aos-easing="ease-in" data-aos-duration="300" data-aos-delay="200">
+      <h1>Games, Grub <span class="italic">&</span> Grog at the premier board game café of St. Louis</h1>
+      <h2>The community we want in the city we love.</h2>
+      <form action="http://www.kickstarter.com/projects/450982150/1755212581/share" target="_blank">
+        <button type="submit">Support our kickstarter</button>
+      </form>
+    </div>
+    <a class="scroll-pointer cd-scroll-down" href="#section2">
+      <div class="scroll-pointer-wrapper">
+        <p class="scroll-pointer-text">Learn More</p>
+        {% include finger.svg %}
+      </div>
+    </a>
+  </div>
 </section>
 
 <section class="section section-about cd-section" id="section2">
@@ -128,8 +130,10 @@ layout: default
       <div class="section-text">
         <h1>Contact</h1>
         <ul class="section-contact-links">
-          <li><span class="section-contact-links-icon">{% include mail-icon.svg %}</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li><span class="section-contact-links-icon">{% include facebook-icon.svg %}</span><a href="facebook.com">Follow us on Facebook</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="facebook.com">Follow us on Facebook</a></li>
+          <!-- <li><span class="section-contact-links-icon">{% include mail-icon.svg %}</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><span class="section-contact-links-icon">{% include facebook-icon.svg %}</span><a href="facebook.com">Follow us on Facebook</a></li> -->
         </ul>
       </div>
     </div>
